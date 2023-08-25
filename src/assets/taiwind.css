@@ -4,7 +4,7 @@
 /* 重写基础样式 */
 @layer base {
   h1 {
-    @apply text-2xl;
+    @apply text-2xl font-bold;
   }
   h2 {
     @apply text-xl;
@@ -20,6 +20,12 @@
   }
   h6 {
     @apply text-xs;
+  }
+  button {
+    @apply bg-green-500 hover:bg-green-600 text-white py-1 px-3 rounded
+  }
+  input {
+    @apply border border-gray-300 rounded px-2 py-1 focus:outline-none focus:border-green-500
   }
 }
 
