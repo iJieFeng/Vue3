@@ -31,6 +31,11 @@ div {
 .code-snap {
   padding: 0 2rem;
 }
+.code-snap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 @media (hover: hover) {
   a:hover {

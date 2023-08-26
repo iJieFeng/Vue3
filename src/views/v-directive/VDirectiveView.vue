@@ -42,15 +42,23 @@
       <hr class="my-5" />
 
       <h3 class="mb-2">案例：指令拖拽</h3>
-      <button @click="showMove = !showMove" class=" mb-5">
+      <button @click="showMove = !showMove" class="mb-5">
         {{ !showMove ? '展示拖拽弹窗' : '关闭拖拽弹窗' }}
       </button>
       <MoveDialog v-model="showMove" />
+
+      <hr class="my-5" />
+      <h3 class="mb-2">案例：自定义指令实现图片懒加载</h3>
+      <ImageView />
+
     </div>
 
     <div class="code-snap">
-      <img :src="$imgUrl + '/vue3/v-directive-1.png'" alt="" />
-      <img :src="$imgUrl + '/vue3/v-directive-2.png'" alt="" />
+      <img v-lazy="$imgUrl + '/vue3/v-directive-1.png'" />
+      <img v-lazy="$imgUrl + '/vue3/v-directive-2.png'" />
+      <img v-lazy="$imgUrl + '/vue3/v-directive-3.1.png'" />
+      <img v-lazy="$imgUrl + '/vue3/v-directive-4.png'" />
+      <img v-lazy="$imgUrl + '/vue3/v-directive-5.png'" />
     </div>
   </div>
 </template>
@@ -58,6 +66,7 @@
 <script setup lang="ts">
 import A from './AView.vue'
 import MoveDialog from './MoveDialog.vue'
+import ImageView from './ImageView.vue';
 import { type Directive, type DirectiveBinding } from 'vue'
 type Dir = {
   background: string

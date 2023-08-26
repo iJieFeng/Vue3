@@ -27,6 +27,9 @@
   input {
     @apply border border-gray-300 rounded px-2 py-1 focus:outline-none focus:border-green-500
   }
+  img {
+    @apply inline-block align-middle;
+  }
 }
 
 @tailwind components;
