@@ -18,6 +18,11 @@ const router = createRouter({
       path: '/v-directive',
       name: 'v-directive',
       component: () => import('@/views/v-directive/VDirectiveView.vue')
+    },
+    {
+      path: '/use-hooks',
+      name: 'use-hooks',
+      component: () => import('@/views/use-hooks/UseHooksView.vue')
     }
   ]
 })
